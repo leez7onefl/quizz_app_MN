@@ -78,14 +78,39 @@ def anchor(cx, cy, color, scale=1.0, rotate=0):
   </g>"""
 
 
+def ancre_fine(color, rotate):
+    """Ancre élancée (tige longue, bras courts) pour l'insigne de major, centrée sur la tige."""
+    return f"""
+    <g transform="rotate({rotate})" fill="none" stroke="{color}" stroke-width="4"
+       stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="0" cy="-36" r="4.5"/>
+      <line x1="-10" y1="-25" x2="10" y2="-25"/>
+      <line x1="0" y1="-31" x2="0" y2="34"/>
+      <path d="M-12,23 Q-10,34 0,35 Q10,34 12,23"/>
+      <path d="M-16,26 L-12,20 L-8,24"/>
+      <path d="M16,26 L12,20 L8,24"/>
+    </g>"""
+
+
+def ancres_croisees(cx, cy, color, ecart=46):
+    """Deux ancres croisées : chacune inclinée de ±`ecart` degrés par rapport à l'horizontale."""
+    return (
+        f'\n  <g transform="translate({cx},{cy}) scale(0.92)">'
+        + ancre_fine(color, -90 + ecart)
+        + ancre_fine(color, -90 - ecart)
+        + "\n  </g>"
+    )
+
+
 def emblem(kind):
     if kind == "ancre_or":
         return anchor(64, 55, OR, 1, -90)
     if kind == "ancre_rouge":
         return anchor(64, 55, ROUGE, 1, -90)
     if kind == "major":
-        # Insigne de major : deux ancres croisées
-        return anchor(64, 55, OR, 0.82, -120) + anchor(64, 55, OR, 0.82, -60)
+        # Insigne de major : deux ancres entrecroisées en X, couchées comme les autres
+        # (anneaux côté col, à gauche ; diamants vers les galons, à droite).
+        return ancres_croisees(70, 55, OR)
     raise ValueError(f"Emblème inconnu : {kind}")
 
 
