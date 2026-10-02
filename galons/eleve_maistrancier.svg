@@ -21,8 +21,10 @@
   <g clip-path="url(#board)">
     <polyline points="267.5,-2 237.5,55.0 267.5,112" fill="none" stroke="#e8b02a" stroke-width="11" stroke-linejoin="miter"/>
     <polyline points="286.5,-2 256.5,55.0 286.5,112" fill="none" stroke="#e8b02a" stroke-width="11" stroke-linejoin="miter"/>
-    <rect x="246.5" y="18" width="53.5" height="3.5" fill="#c42a4a"/>
-    <rect x="246.5" y="89" width="53.5" height="3.5" fill="#c42a4a"/>
+    <rect x="246.5" y="17" width="53.5" height="6" fill="#d32a2a"/>
+    <rect x="246.5" y="19.0" width="53.5" height="2" fill="#2f6fd6"/>
+    <rect x="246.5" y="87" width="53.5" height="6" fill="#d32a2a"/>
+    <rect x="246.5" y="89.0" width="53.5" height="2" fill="#2f6fd6"/>
   </g>
   <g transform="translate(64,55) rotate(-90) scale(1)" fill="none" stroke="#e8b02a"
      stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
