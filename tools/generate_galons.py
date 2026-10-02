@@ -8,7 +8,7 @@ Chaque grade décrit son galon dans grades.json :
     emblem   : "ancre_or" | "ancre_rouge" | "major"
     bandes   : liste de galons verticaux, de gauche à droite
                ("or", "argent", "or_large", "or_fin", "argent_fin", "aspirant")
-    chevrons : {"nombre": n, "couleur": "or"|"rouge", "liseres": "bleu"|"pourpre"}
+    chevrons : {"nombre": n, "couleur": "or"|"rouge", "liseres": "bleu"|"rouge_bleu"}
     etoiles  : nombre d'étoiles (officiers généraux)
 
 Le script n'a besoin d'aucune dépendance externe.
@@ -31,7 +31,8 @@ ARGENT = "#dfe3ea"
 ARGENT_FONCE = "#9aa1ad"
 ROUGE = "#e3241b"
 BLEU_ASPIRANT = "#3f7fe0"
-LISERES = {"bleu": "#8ea6c8", "pourpre": "#c42a4a"}
+# Liserés des maistranciers : (couleur de la bande, couleur du filet intérieur ou None)
+LISERES = {"bleu": ("#8ea6c8", None), "rouge_bleu": ("#d32a2a", "#2f6fd6")}
 
 # Géométrie du fourreau (vue horizontale, comme sur la planche officielle)
 W, H = 300, 110
@@ -110,7 +111,8 @@ def bandes(liste):
         parts.append(f'<rect x="{x}" y="{TOP}" width="{w}" height="{BOTTOM - TOP}" fill="{fill}"/>')
         if b == "aspirant":
             # Galon d'aspirant : or interrompu de bleu
-            for y in (22, 52, 82):
+            # Galon d'aspirant : deux interruptions bleues
+            for y in (28, 74):
                 parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="7" fill="{BLEU_ASPIRANT}"/>')
         x += w + GAP
     return '\n  <g clip-path="url(#board)">\n    ' + "\n    ".join(parts) + "\n  </g>"
@@ -131,14 +133,17 @@ def chevrons(spec):
             f'fill="none" stroke="{color}" stroke-width="{width}" stroke-linejoin="miter"/>'
         )
     if spec.get("liseres"):
-        c = LISERES[spec["liseres"]]
+        bande, filet = LISERES[spec["liseres"]]
         x0 = x_last - (n - 1) * step + depth * 0.3
-        for y in (TOP + 12, BOTTOM - 15):
-            parts.append(f'<rect x="{x0}" y="{y}" width="{300 - x0}" height="3.5" fill="{c}"/>')
+        h = 6 if filet else 3.5  # bande plus large quand elle porte un filet intérieur
+        for y in (TOP + 11, BOTTOM - 11 - h):
+            parts.append(f'<rect x="{x0}" y="{y}" width="{300 - x0}" height="{h}" fill="{bande}"/>')
+            if filet:
+                parts.append(f'<rect x="{x0}" y="{y + h / 2 - 1}" width="{300 - x0}" height="2" fill="{filet}"/>')
     return '\n  <g clip-path="url(#board)">\n    ' + "\n    ".join(parts) + "\n  </g>"
 
 
-def star(cx, cy, r=13):
+def star(cx, cy, r=11):
     pts = []
     for i in range(10):
         rad = r if i % 2 == 0 else r * 0.42
@@ -148,10 +153,12 @@ def star(cx, cy, r=13):
 
 
 STAR_LAYOUTS = {
-    2: [(225, 36), (225, 74)],
-    3: [(208, 38), (242, 38), (225, 74)],
-    4: [(225, 28), (200, 55), (250, 55), (225, 82)],
-    5: [(202, 32), (248, 32), (225, 55), (202, 78), (248, 78)],
+    # Disposition de la planche officielle : une colonne de 2 étoiles (haut/bas),
+    # complétée au milieu vers l'ancre (3), vers le bout du fourreau (4), puis encore vers l'ancre (5).
+    2: [(226, 26), (226, 84)],
+    3: [(226, 26), (226, 84), (192, 55)],
+    4: [(226, 26), (226, 84), (192, 55), (260, 55)],
+    5: [(226, 26), (226, 84), (192, 55), (260, 55), (156, 55)],
 }
 
 
