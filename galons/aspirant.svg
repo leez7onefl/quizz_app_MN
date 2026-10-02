@@ -20,9 +20,8 @@
   <path d="M8,16 L290,6 Q296,6 296,12 L296,98 Q296,104 290,104 L8,94 Q4,94 4,90 L4,20 Q4,16 8,16 Z" fill="url(#fond)" stroke="#000" stroke-width="1"/>
   <g clip-path="url(#board)">
     <rect x="261" y="6" width="11" height="98" fill="url(#or)"/>
-    <rect x="261" y="22" width="11" height="7" fill="#3f7fe0"/>
-    <rect x="261" y="52" width="11" height="7" fill="#3f7fe0"/>
-    <rect x="261" y="82" width="11" height="7" fill="#3f7fe0"/>
+    <rect x="261" y="28" width="11" height="7" fill="#3f7fe0"/>
+    <rect x="261" y="74" width="11" height="7" fill="#3f7fe0"/>
   </g>
   <g transform="translate(64,55) rotate(-90) scale(1)" fill="none" stroke="#e8b02a"
      stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
