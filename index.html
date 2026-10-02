@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Grades de la Marine</title>
+  <meta name="description" content="Quiz pour apprendre les galons d'épaule de la Marine nationale.">
+  <meta name="theme-color" content="#0b1d3a">
+  <link rel="icon" href="galons/cv.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+  <main id="app">
+
+    <!-- Accueil -->
+    <section id="ecran-accueil" class="ecran">
+      <div class="accueil">
+        <img class="accueil-galon" src="galons/cf.svg" alt="">
+        <h1>Grades de la Marine</h1>
+        <p class="accroche">20 questions pour reconnaître les galons d'épaule de la Marine nationale.</p>
+        <ul class="regles">
+          <li><strong>100 points</strong> par bonne réponse</li>
+          <li><strong>−1 point</strong> par dixième de seconde</li>
+          <li><strong>−20 points</strong> par erreur</li>
+        </ul>
+        <p class="modes-titre">Choisis ton entraînement</p>
+        <div class="modes">
+          <button class="mode" data-mode="grade" disabled>
+            <span class="mode-nom">Nom du grade</span>
+            <span class="mode-desc">Trouver le nom exact : « Capitaine de frégate ». Les surnoms (Cipal, Patron…) s'y glissent aussi.</span>
+          </button>
+          <button class="mode" data-mode="appellation" disabled>
+            <span class="mode-nom">Comment l'appeler</span>
+            <span class="mode-desc">Trouver ce qu'on dit en face : « Commandant », « Amiral », « Maître »…</span>
+          </button>
+        </div>
+        <button id="btn-planche" class="btn btn-secondaire">Revoir tous les galons</button>
+      </div>
+    </section>
+
+    <!-- Question -->
+    <section id="ecran-question" class="ecran" hidden>
+      <header class="barre">
+        <button id="btn-quitter" class="btn-icone" aria-label="Quitter la partie">✕</button>
+        <div class="progression"><span id="num-question">1</span>/20</div>
+        <div class="score-total"><span id="score">0</span> pts</div>
+      </header>
+      <div class="chrono" aria-hidden="true">
+        <div class="chrono-barre"><div id="chrono-remplissage"></div></div>
+        <div class="chrono-points"><span id="points-en-jeu">100</span></div>
+      </div>
+
+      <div class="question">
+        <h2 id="enonce"></h2>
+        <div id="sujet"></div>
+        <div id="choix" class="choix"></div>
+      </div>
+
+      <div id="feedback" class="feedback" hidden>
+        <div id="feedback-titre" class="feedback-titre"></div>
+        <div id="feedback-detail"></div>
+        <button id="btn-suivant" class="btn btn-principal">Suivant</button>
+      </div>
+    </section>
+
+    <!-- Fin -->
+    <section id="ecran-fin" class="ecran" hidden>
+      <div class="fin">
+        <p class="fin-label">Score final</p>
+        <p id="fin-score" class="fin-score">0</p>
+        <p id="fin-stats" class="fin-stats"></p>
+        <div id="fin-rates"></div>
+        <button id="btn-rejouer" class="btn btn-principal">Rejouer</button>
+        <button id="btn-changer-mode" class="btn btn-secondaire">Changer de mode</button>
+        <button id="btn-planche-fin" class="btn btn-secondaire">Revoir tous les galons</button>
+      </div>
+    </section>
+
+    <!-- Planche de révision -->
+    <section id="ecran-planche" class="ecran" hidden>
+      <header class="barre barre-planche">
+        <button id="btn-retour" class="btn-icone" aria-label="Retour">←</button>
+        <h2>Tous les galons</h2>
+        <span></span>
+      </header>
+      <div id="planche" class="planche"></div>
+    </section>
+
+  </main>
+  <script type="module" src="js/main.js?v=6"></script>
+</body>
+</html>

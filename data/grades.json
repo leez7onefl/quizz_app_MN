@@ -1,0 +1,389 @@
+{
+  "source": "Planche « Grades et appellations — Marine nationale », lamarinerecrute.fr",
+  "categories": [
+    {
+      "id": "equipages",
+      "nom": "Équipages"
+    },
+    {
+      "id": "om_sub",
+      "nom": "Officiers mariniers subalternes"
+    },
+    {
+      "id": "om_sup",
+      "nom": "Officiers mariniers supérieurs"
+    },
+    {
+      "id": "off_sub",
+      "nom": "Officiers subalternes"
+    },
+    {
+      "id": "off_sup",
+      "nom": "Officiers supérieurs"
+    },
+    {
+      "id": "off_gen",
+      "nom": "Officiers généraux"
+    }
+  ],
+  "grades": [
+    {
+      "id": "mousse",
+      "nom": "Mousse",
+      "appellation": "Mousse",
+      "categorie": "equipages",
+      "rang": 1,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_rouge"
+      }
+    },
+    {
+      "id": "matelot_brevete",
+      "nom": "Matelot breveté",
+      "appellation": "Matelot",
+      "categorie": "equipages",
+      "rang": 2,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_rouge",
+        "chevrons": {
+          "nombre": 1,
+          "couleur": "rouge"
+        }
+      }
+    },
+    {
+      "id": "qm2",
+      "nom": "Quartier-maître de 2e classe",
+      "appellation": "Quartier-maître",
+      "categorie": "equipages",
+      "rang": 3,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_rouge",
+        "chevrons": {
+          "nombre": 2,
+          "couleur": "rouge"
+        }
+      }
+    },
+    {
+      "id": "qm1",
+      "nom": "Quartier-maître de 1re classe",
+      "appellation": "Quartier-maître",
+      "categorie": "equipages",
+      "rang": 4,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_rouge",
+        "chevrons": {
+          "nombre": 3,
+          "couleur": "rouge"
+        }
+      }
+    },
+    {
+      "id": "eleve_maistrancier",
+      "nom": "Élève maistrancier",
+      "appellation": "Élève maistrancier",
+      "categorie": "om_sub",
+      "rang": 5,
+      "hierarchie_sure": false,
+      "galon": {
+        "emblem": "ancre_or",
+        "chevrons": {
+          "nombre": 2,
+          "couleur": "or",
+          "liseres": "pourpre"
+        }
+      }
+    },
+    {
+      "id": "sm_maistrancier",
+      "nom": "Second-maître maistrancier",
+      "appellation": "Second-maître maistrancier",
+      "categorie": "om_sub",
+      "rang": 6,
+      "hierarchie_sure": false,
+      "galon": {
+        "emblem": "ancre_or",
+        "chevrons": {
+          "nombre": 2,
+          "couleur": "or",
+          "liseres": "bleu"
+        }
+      }
+    },
+    {
+      "id": "second_maitre",
+      "nom": "Second-maître",
+      "appellation": "Second-maître",
+      "categorie": "om_sub",
+      "rang": 7,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "chevrons": {
+          "nombre": 2,
+          "couleur": "or"
+        }
+      },
+      "surnom": {
+        "texte": "Chef",
+        "remarque": "Appellation familière assez répandue selon les unités."
+      }
+    },
+    {
+      "id": "maitre",
+      "nom": "Maître",
+      "appellation": "Maître",
+      "categorie": "om_sub",
+      "rang": 8,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "chevrons": {
+          "nombre": 3,
+          "couleur": "or"
+        }
+      },
+      "surnom": {
+        "texte": "Patron",
+        "remarque": "Appellation officieuse traditionnelle des maîtres et premiers maîtres."
+      }
+    },
+    {
+      "id": "premier_maitre",
+      "nom": "Premier maître",
+      "appellation": "Premier maître",
+      "categorie": "om_sup",
+      "rang": 9,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "bandes": [
+          "or_large",
+          "argent_fin"
+        ]
+      },
+      "surnom": {
+        "texte": "Patron",
+        "remarque": "Même origine que pour les maîtres. Parfois simplement « PM »."
+      }
+    },
+    {
+      "id": "maitre_principal",
+      "nom": "Maître principal",
+      "appellation": "Maître principal",
+      "categorie": "om_sup",
+      "rang": 10,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "bandes": [
+          "or_large",
+          "argent_fin",
+          "or_fin"
+        ]
+      },
+      "surnom": {
+        "texte": "Cipal",
+        "remarque": "L'un des surnoms les plus établis. Pluriel traditionnel : « cipaux »."
+      }
+    },
+    {
+      "id": "major",
+      "nom": "Major",
+      "appellation": "Major",
+      "categorie": "om_sup",
+      "rang": 11,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "major",
+        "bandes": [
+          "or_large",
+          "argent_fin",
+          "or_fin"
+        ]
+      }
+    },
+    {
+      "id": "aspirant",
+      "nom": "Aspirant",
+      "appellation": "Lieutenant",
+      "categorie": "off_sub",
+      "rang": 12,
+      "hierarchie_sure": false,
+      "galon": {
+        "emblem": "ancre_or",
+        "bandes": [
+          "aspirant"
+        ]
+      },
+      "surnom": {
+        "texte": "Midship",
+        "remarque": "Abréviation de « midshipman », héritée de la tradition navale britannique."
+      }
+    },
+    {
+      "id": "ev2",
+      "nom": "Enseigne de vaisseau de 2e classe",
+      "appellation": "Lieutenant",
+      "categorie": "off_sub",
+      "rang": 13,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "bandes": [
+          "or"
+        ]
+      }
+    },
+    {
+      "id": "ev1",
+      "nom": "Enseigne de vaisseau de 1re classe",
+      "appellation": "Lieutenant",
+      "categorie": "off_sub",
+      "rang": 14,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "bandes": [
+          "or",
+          "or"
+        ]
+      }
+    },
+    {
+      "id": "lv",
+      "nom": "Lieutenant de vaisseau",
+      "appellation": "Capitaine",
+      "categorie": "off_sub",
+      "rang": 15,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "bandes": [
+          "or",
+          "or",
+          "or"
+        ]
+      }
+    },
+    {
+      "id": "cc",
+      "nom": "Capitaine de corvette",
+      "appellation": "Commandant",
+      "categorie": "off_sup",
+      "rang": 16,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "bandes": [
+          "or",
+          "or",
+          "or",
+          "or"
+        ]
+      }
+    },
+    {
+      "id": "cf",
+      "nom": "Capitaine de frégate",
+      "appellation": "Commandant",
+      "categorie": "off_sup",
+      "rang": 17,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "bandes": [
+          "or",
+          "argent",
+          "or",
+          "argent",
+          "or"
+        ]
+      }
+    },
+    {
+      "id": "cv",
+      "nom": "Capitaine de vaisseau",
+      "appellation": "Commandant",
+      "categorie": "off_sup",
+      "rang": 18,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "bandes": [
+          "or",
+          "or",
+          "or",
+          "or",
+          "or"
+        ]
+      }
+    },
+    {
+      "id": "ca",
+      "nom": "Contre-amiral",
+      "appellation": "Amiral",
+      "categorie": "off_gen",
+      "rang": 19,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "etoiles": 2
+      }
+    },
+    {
+      "id": "va",
+      "nom": "Vice-amiral",
+      "appellation": "Amiral",
+      "categorie": "off_gen",
+      "rang": 20,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "etoiles": 3
+      }
+    },
+    {
+      "id": "vae",
+      "nom": "Vice-amiral d'escadre",
+      "appellation": "Amiral",
+      "categorie": "off_gen",
+      "rang": 21,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "etoiles": 4
+      }
+    },
+    {
+      "id": "amiral",
+      "nom": "Amiral",
+      "appellation": "Amiral",
+      "categorie": "off_gen",
+      "rang": 22,
+      "hierarchie_sure": true,
+      "galon": {
+        "emblem": "ancre_or",
+        "etoiles": 5
+      }
+    }
+  ],
+  "vocabulaire": [
+    {
+      "terme": "Pacha",
+      "sens": "Commandant du bâtiment",
+      "remarque": "Ce n'est pas un grade : c'est le commandant du bâtiment qui est « le pacha », quel que soit son grade."
+    },
+    {
+      "terme": "Bidel",
+      "sens": "Capitaine d'armes",
+      "remarque": "Responsable notamment de la discipline et du service courant. Son bureau est la « bidellerie »."
+    }
+  ],
+  "source_surnoms": "Surnoms et vocabulaire : Cols Bleus, Wikipédia"
+}

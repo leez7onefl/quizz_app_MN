@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 110" role="img" aria-label="Galon">
+  <defs>
+    <clipPath id="board"><path d="M8,16 L290,6 Q296,6 296,12 L296,98 Q296,104 290,104 L8,94 Q4,94 4,90 L4,20 Q4,16 8,16 Z"/></clipPath>
+    <linearGradient id="fond" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#262a35"/>
+      <stop offset="0.45" stop-color="#101218"/>
+      <stop offset="1" stop-color="#07080b"/>
+    </linearGradient>
+    <linearGradient id="or" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b7841a"/>
+      <stop offset="0.5" stop-color="#e8b02a"/>
+      <stop offset="1" stop-color="#b7841a"/>
+    </linearGradient>
+    <linearGradient id="argent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9aa1ad"/>
+      <stop offset="0.5" stop-color="#dfe3ea"/>
+      <stop offset="1" stop-color="#9aa1ad"/>
+    </linearGradient>
+  </defs>
+  <path d="M8,16 L290,6 Q296,6 296,12 L296,98 Q296,104 290,104 L8,94 Q4,94 4,90 L4,20 Q4,16 8,16 Z" fill="url(#fond)" stroke="#000" stroke-width="1"/>
+  <polygon points="208.0,25.0 211.2,33.6 220.4,34.0 213.2,39.7 215.6,48.5 208.0,43.5 200.4,48.5 202.8,39.7 195.6,34.0 204.8,33.6" fill="url(#argent)" stroke="#9aa1ad" stroke-width="0.6"/>
+  <polygon points="242.0,25.0 245.2,33.6 254.4,34.0 247.2,39.7 249.6,48.5 242.0,43.5 234.4,48.5 236.8,39.7 229.6,34.0 238.8,33.6" fill="url(#argent)" stroke="#9aa1ad" stroke-width="0.6"/>
+  <polygon points="225.0,61.0 228.2,69.6 237.4,70.0 230.2,75.7 232.6,84.5 225.0,79.5 217.4,84.5 219.8,75.7 212.6,70.0 221.8,69.6" fill="url(#argent)" stroke="#9aa1ad" stroke-width="0.6"/>
+  <g transform="translate(64,55) rotate(-90) scale(1)" fill="none" stroke="#e8b02a"
+     stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="-30" r="5.5"/>
+    <line x1="-14" y1="-18" x2="14" y2="-18"/>
+    <line x1="0" y1="-24" x2="0" y2="28"/>
+    <path d="M-24,8 Q-21,28 0,29 Q21,28 24,8"/>
+    <path d="M-29,13 L-24,6 L-18,12" />
+    <path d="M29,13 L24,6 L18,12" />
+  </g>
+</svg>

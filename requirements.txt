@@ -1,0 +1,7 @@
+# Seule dépendance : Streamlit, pour la version streamlit_app.py
+# (Streamlit Community Cloud installe automatiquement ce fichier).
+#
+# Le reste du projet n'utilise que la bibliothèque standard de Python :
+#  - tools/generate_galons.py, main.py : aucune dépendance
+#  - le site GitHub Pages n'a pas besoin de Python du tout
+streamlit>=1.30
