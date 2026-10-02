@@ -94,15 +94,6 @@ dans `vocabulaire`, en fin de fichier. La planche « Revoir tous les galons » a
 node --test
 ```
 
-## Mettre en ligne sur GitHub Pages
-
-1. Créer un dépôt GitHub et y pousser le contenu de ce dossier (le fichier `.nojekyll` compris).
-2. Dans le dépôt : **Settings → Pages**.
-3. **Source** : « Deploy from a branch », branche `main`, dossier `/ (root)`, puis **Save**.
-4. Après une minute, le site est disponible à `https://<ton-pseudo>.github.io/<nom-du-depot>/`.
-
-Chaque `git push` sur `main` met le site à jour automatiquement.
-
 ## Source
 
 Surnoms et vocabulaire : Cols Bleus, Wikipédia.
